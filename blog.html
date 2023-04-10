@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LeafyLawns</title>
+  <!-- <base href="/"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- css Only -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<!-- jquery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<!-- java script -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<!-- icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+ <!-- Font Awesome CDN-->
+ <link
+ rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+<!-- Google Font -->
+<link
+ href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+ rel="stylesheet"
+/>
+<!-- Stylesheet -->
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+   
+   
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #56CCF2;
+background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+  color: #666;
+}
+</style>
+</head>
+<body>
+   <!-- navbar start -->
+   <div class="navigation-wrap bg-light start-header start-style">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-md navbar-light">
+                <img src="/assets/logo.jpg" width="50px" height="50px">
+                    <a class="navbar-brand"> Leafy_Lawns</a>	
+                    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto py-4 py-md-0">
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="service.html">Services</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="product.html">Products</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="blog.html">Blogs</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="contect.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="feedback.html">Feedback</a>
+                            </li>
+                            <button type="button" class="btn btn-info" style="margin-left: 13px;"  >LogIn</button>
+                        </ul>
+                    </div>
+                    
+                </nav>		
+            </div>
+        </div>
+    </div>
+</div>
+   <!-- navbar end -->
+   <!-- blogs start -->
+   <div class="container" >
+    <div class="card">
+      <div class="card__header">
+        <img src="https://img.staticmb.com/mbcontent//images/uploads/2020/12/garden%20landscape%20design.jpg" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-blue">Landscaping</span>
+         
+        <p>
+          Living elements, such as flora or fauna; or what is commonly called gardening, the art and craft of growing plants with a goal of creating a beauty within the landscape.
+        </p>
+      </div>
+       
+    </div>
+    <div class="card">
+      <div class="card__header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoN-Zts1hD0pe2iOZw40cDfUoVlS2AKwsXBh8EQCgCNIvy5NxyrOWbgDVzSmAnkGmLI8I&usqp=CAU" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-brown">Home Delivery Service</span>
+        <p>
+          The use of organic fertilizers has advantage of being cheap, improving soil structure, texture and aeration increasing the
+           soils water retention abilities and stimulating healthy root development.
+        </p>
+      </div>
+       
+    </div>
+    <div class="card">
+      <div class="card__header">
+        <img src="https://media.istockphoto.com/id/959697442/photo/farmer-giving-granulated-fertilizer-to-young-tomato-plants.jpg?s=612x612&w=0&k=20&c=4sewLXboXwTJY9kAXcyjw0GAwN33XzEGVjln597d_aE=" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-red">Using Organic Fertilizer</span>
+        <p>
+          The use of organic fertilizers has advantage of being cheap, improving soil structure, texture and aeration increasing the
+           soils water retention abilities and stimulating healthy root development.
+        </p>
+      </div>
+       
+    </div>
+  
+    <div class="card">
+      <div class="card__header">
+        <img src="https://www.planetnatural.com/wp-content/uploads/2012/12/fertilizer-products-1.jpg" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-blue">Provide Fertilizer And Seed</span>
+        <p>
+          Germination is generally inhibited by the presence of the fertilizers. This inhibition is greater when the fertilizer
+           is in direct contact with the seed than when it is mixed with the soil.
+        </p>
+      </div>
+       
+    </div>
+    <div class="card">
+      <div class="card__header">
+        <img src="https://www.bhg.com/thmb/w1nvm3p2qmu4Ljb9AOfmVl-UvCI=/3000x0/filters:no_upscale():strip_icc()/how-to-water-houseplants-5651236-primary-3aa1e5b5021640ee96184b6755caa964.jpg" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-brown">Different types of plants</span>
+        <p>
+          Commercial nurseries produce and distribute woody and herbaceous plants, 
+          including ornamental trees, shrubs, and bulb crops.
+        </p>
+      </div>
+       
+    </div>
+    <div class="card">
+      <div class="card__header">
+        <img src="https://www.homestratosphere.com/wp-content/uploads/2018/08/newfeatured-10142022.jpg" alt="card__image" class="card__image" width="600">
+      </div>
+      <div class="card__body">
+        <span class="tag tag-red">Gardening Tool Kit</span>
+        <p>
+          They help make labour‑intensive tasks easier. These tools and equipment, designed to perform different operations, help in carrying out day‑to‑day farm tasks efficiently, 
+          easily, timely and economically.
+        </p>
+      </div>
+       
+    </div>
+  </div>
+   <!-- blogs end -->
+
+
+  
+
+   <!-- Footer start -->
+   <div class=" text-white text-center text-lg-start">
+    <footer class="footer-distributed">
+        <div class="footer-right">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-github"></i></a>
+        </div>
+        <div class="footer-left">
+             
+            <h3><img src="/assets/logo-removebg.png" width="50px" height="50px"> Leafy_Lawns </h3>
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+                <a href="#">Servies</a>
+                <a href="#">Blogs</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Feedback</a>
+            </p>
+            <p>&nbsp;Leafy_Lawns Copyright reserved. &nbsp; </p>
+             
+        </div>
+    </footer>
+    
+ </div>
+   <!-- Footer End -->
+</body>
+</html>
